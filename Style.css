@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f9fc;
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px 60px;
+    color: #333;
+  }
+  .container {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 30px 40px 40px;
+  }
+  h1 {
+    text-align: center;
+    color: #2b6777;
+    margin-bottom: 15px;
+  }
+  form {
+    margin-bottom: 25px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2b6777;
+  }
+  input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border: 1.8px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+    border-color: #2b6777;
+    outline: none;
+  }
+  .item-entry {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .item-entry input[type="text"], .item-entry input[type="number"] {
+    flex: 1;
+  }
+  .item-entry input[type="number"] {
+    max-width: 90px;
+  }
+  button, .btn {
+    background-color: #2b6777;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover, .btn:hover {
+    background-color: #255560;
+  }
+  #add-item-btn {
+    margin-top: -10px;
+    margin-bottom: 25px;
+    padding: 8px 18px;
+    font-weight: 600;
+  }
+  .receipt {
+    background: #e3f6f5;
+    border: 2px solid #2b6777;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .receipt-header h2 {
+    margin: 0;
+    color: #2b6777;
+  }
+  .receipt-info {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  table th, table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1.5px solid #b1d0d7;
+  }
+  table th {
+    background-color: #74a9ad;
+    color: white;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .total {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2b6777;
+  }
+  .footer-note {
+    text-align: center;
+    font-size: 13px;
+    color: #5c5c5c;
+    margin-top: 25px;
+    font-style: italic;
+  }
+  @media (max-width: 480px) {
+    .item-entry {
+      flex-direction: column;
+    }
+    .item-entry input[type="number"] {
+      max-width: 100%;
+    }
+  }

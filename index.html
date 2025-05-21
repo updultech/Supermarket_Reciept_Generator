@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Supermarket Cash Receipt Generator</title>
+<link rel="stylesheet" href="Style.css">
+<script src="script.js"></script>
+    </head>
+<body>
+  <div class="container">
+    <h1>Supermarket Cash Receipt Generator</h1>
+    <form id="receipt-form">
+      <label for="customer-name">Customer Name</label>
+      <input type="text" id="customer-name" placeholder="Enter customer name" required />
+
+      <label for="purchase-date">Date of Purchase</label>
+      <input type="date" id="purchase-date" required />
+
+      <div id="items-container">
+        <label>Purchased Items</label>
+        <div class="item-entry">
+          <input type="text" class="item-name" placeholder="Item Name" required />
+          <input type="number" class="item-qty" placeholder="Qty" min="1" value="1" required />
+          <input type="number" class="item-price" placeholder="Price per Unit ($)" min="0" step="0.01" value="0" required />
+        </div>
+      </div>
+
+      <button type="button" id="add-item-btn">+ Add Another Item</button><br />
+
+      <button type="submit">Generate Receipt</button>
+    </form>
+    <div id="receipt-output" class="receipt" style="display:none;">
+      <div class="receipt-header">
+        <h2>SuperMart</h2>
+        <div class="receipt-info">123 Market St, Cityville</div>
+        <div class="receipt-info" id="receipt-date"></div>
+        <div class="receipt-info" id="receipt-customer"></div>
+      </div>
+      <table id="receipt-items-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Price/unit ($)</th>
+            <th class="text-right">Total ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div class="text-right total">Total Amount: $<span id="total-amount">0.00</span></div>
+      <div class="footer-note">Thank you for shopping at SuperMart!</div>
+    </div>
+  </div>
+</body>
+</html>
